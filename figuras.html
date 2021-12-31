@@ -1,13 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./figuras.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
     <title>Figuras Geométricas</title>
 </head>
+
 <body>
-    <h1>Figuras Geométricas</h1>
+    <header>
+        <h1>Figuras Geométricas</h1>
+        <p>Calcula el área y perímetro de las figuras geométricas.</p>
+        <p>Selecciona una opción.</p>
+    </header>
+
+    <div class="seleccionar-figura">
+        <div class="seleccionar-cuadrado" onclick="imprimir('calcularCuadrado')">
+            <img src="https://cdn.pixabay.com/photo/2020/06/04/13/22/square-5258734_960_720.png" alt="cuadrado">
+        </div>
+
+
+
+        <div class="seleccionar-triangulo" onclick="imprimir('calcularTriangulo')">
+            <img src="https://cdn.pixabay.com/photo/2020/06/04/13/22/triangle-5258735_960_720.png" alt="triangulo">
+        </div>
+
+
+
+        <div class="seleccionar-circulo" onclick="imprimir('calcularCirculo')">
+            <img src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/49805/smiling-face-with-smiling-eyes-emoji-clipart-md.png"
+                alt="circulo">
+        </div>
+
+
+    </div>
+
+    <div class="container">
+
+        <section class="cuadrado" id="calcularCuadrado">
+            <div class="title">
+                <img src="https://cdn.pixabay.com/photo/2020/06/04/13/22/square-5258734_960_720.png" alt="cuadrado">
+                <h2>Cuadrado</h2>
+            </div>
+            <form action="">
+                <label for="medidasCuadrado">
+                    Escribe la medida de los lados del cuadrado
+                </label>
+                <input type="number" id="medidasCuadrado" placeholder="Escribe la medida aquí">
+                <div class="button button-cuadrado">
+                    <button type="button" onclick="calcularPerimetroCuadrado()">
+                        <i class="fas fa-calculator"></i>
+                        Calcular perímetro
+                    </button>
+                    <button type="button" onclick="calcularAreaCuadrado()">
+                        <i class="fas fa-calculator"></i>
+                        Calcular área
+                    </button>
+                </div>
+            </form>
+
+        </section>
+
+        <section class="triangulo" id="calcularTriangulo">
+            <div class="title">
+                <img src="https://cdn.pixabay.com/photo/2020/06/04/13/22/triangle-5258735_960_720.png"
+                    alt="triangulo animado">
+                <h2>Triángulo</h2>
+            </div>
+            <form action="">
+                <label for="lado1-triangulo">
+                    Escribe la medida del lado 1 del triángulo
+                </label>
+                <input type="number" id="lado1-triangulo" placeholder="Escribe la medida aquí">
+
+                <label for="lado2-triangulo">
+                    Escribe la medida del lado 2 del triángulo
+                </label>
+                <input type="number" id="lado2-triangulo" placeholder="Escribe la medida aquí">
+
+                <label for="base-triangulo">
+                    Escribe la medida de la base del triángulo
+                </label>
+                <input type="number" id="base-triangulo" placeholder="Escribe la medida aquí">
+
+                <label for="altura-triangulo">
+                    Escribe la medida de la altura del triángulo
+                </label>
+                <input type="number" id="altura-triangulo" placeholder="Escribe la medida aquí">
+
+
+                <div class="button button-triangulo">
+                    <button type="button" onclick="calcularPerimetroTriangulo()">
+                        <i class="fas fa-calculator"></i>
+                        Calcular perímetro
+                    </button>
+                    <button type="button" onclick="calcularAreaTriangulo()">
+                        <i class="fas fa-calculator"></i>
+                        Calcular área
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <section class="circulo" id="calcularCirculo">
+            <div class="title">
+                <img src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/49805/smiling-face-with-smiling-eyes-emoji-clipart-md.png"
+                    alt="circulo animado">
+                <h2>Círculo</h2>
+            </div>
+            <form action="">
+                <label for="radioCirculo">
+                    Escribe la medida del radio del Círculo
+                </label>
+                <input type="number" id="radioCirculo" placeholder="Escribe la medida aquí">
+                <div class="button button-circulo">
+                    <button type="button" onclick="calcularPerimetroCirculo()">
+                        <i class="fas fa-calculator"></i>
+                        Calcular perímetro
+                    </button>
+                    <button type="button" onclick="calcularAreaCirculo()">
+                        <i class="fas fa-calculator"></i>
+                        Calcular área
+                    </button>
+                </div>
+            </form>
+        </section>
+    </div>
+
+
+
+
     <script src="./figuras.js"></script>
 </body>
+
 </html>
