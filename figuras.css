@@ -185,6 +185,7 @@ form input{
     border-radius: 18px;
     font-family: 'Courgette', cursive;
     color: #ffff;
+    margin-bottom: 10px;
 }
 
 .button-cuadrado button{
@@ -194,6 +195,10 @@ form input{
 
 .button-cuadrado button:hover{
     background-color: #1B4F72;
+}
+
+.button-triangulo{
+    text-align: center;
 }
 
 .button-triangulo button{
