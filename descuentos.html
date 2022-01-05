@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="descuentos.css">
+    <title>Porcentajes y descuentos</title>
+</head>
+
+<body>
+    <header>
+        <h1>Porcentajes y descuentos</h1>
+        <p>Herramienta simuladora de descuentos.</p>
+        <p>¡Conoce el precio final!</p>
+    </header>
+    <section>
+        <h3>Calcula el precio a pagar de tus productos con descuento</h3>
+        <form>
+            <label for="inputPrice">
+                Ingresa el precio del producto</label>
+            <input type="number" id="inputPrice" placeholder="Precio del producto">
+
+            <label for="inputDiscount">
+                Ingresa el descuento</label>
+            <input type="number" id="inputDiscount" placeholder="Porcentaje de descuento">
+
+            <button type="button" onclick="calcularPriceFinal()">
+                <i class="fas fa-dollar-sign"></i>
+                Calcular precio
+            </button>
+
+            <p id="resultPrice"></p>
+        </form>
+    </section>
+
+    <section>
+        <h3>Si tienes cupón para aplicar descuento ingresa el código inscrito en el cupón</h3>
+        <form>
+            <label for="inputPrecio">
+                Ingresa el precio del producto
+            </label>
+            <input type="number" id="inputPrecio" placeholder="Precio del producto">
+
+            <label for="inputCupon">
+                Ingresa el código del cupón</label>
+            <input type="text" id="inputCupon" placeholder="Código del cupón">
+
+            <button type="button" onclick="calcularDescuentoCupon()">
+                <i class="fas fa-dollar-sign"></i>
+                Calcular precio</button>
+
+            <p id="resultDescuentoCupon"></p>
+        </form>
+    </section>
+
+    <script src="./descuentos.js"></script>
+</body>
+
+</html>
