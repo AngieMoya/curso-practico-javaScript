@@ -85,7 +85,8 @@ button:hover{
 
 #resultado,
 #resultadoMediana,
-#resultadoModa{
+#resultadoModa,
+#resultadoMediaCuadratica{
     margin-bottom: 20px;
     color: #FF7043;
     font-weight: bold;
