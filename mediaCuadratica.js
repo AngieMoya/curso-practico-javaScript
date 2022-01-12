@@ -2,14 +2,11 @@ function mediaCuadratica(listaError) {
   let suma = 0;
 
   listaError.forEach((element) => {
-    suma = suma + Math.pow(element, 2);
+    suma += Math.pow(element, 2);
     console.log(suma);
   });
 
-  const rms = Math.sqrt(suma / listaError.length);
-  console.log(rms);
-
-  return rms;
+    return  Math.sqrt(suma / listaError.length);
 }
 
 function calcularMediaCuadratica(){
