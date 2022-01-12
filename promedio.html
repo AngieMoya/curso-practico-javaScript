@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kreon:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./promedioMedianaYmoda.css">
+    <title>Promedio</title>
+</head>
+
+<body>
+    <header>
+        <h1>Promedio</h1>
+        <p>¡Determina el promedio suministrando los datos que vas a evaluar!</p>
+    </header>
+    <section>
+        <form>
+            <label for="datos">Ingresa los datos que deseas validar separados por comas (,) </label>
+            <input type="text" id="datos" placeholder=" ej. 1, 2, 3...">
+            <button type="button" onclick="calcularPromedio()"> Calcular Promedio </button>
+            <p id="resultado"></p>
+        </form>
+    </section>
+    <div class="regresar"><a href="./promedioModaMediana.html">Home</a></div>
+
+    <script src="./promedio.js"></script>
+</body>
+
+</html>

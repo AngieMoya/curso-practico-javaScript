@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Elsie', cursive;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000033 ;
+}
+
+header{
+    color: #F2F3F4;
+    text-align: center;
+    margin: 20px 0px 20px 0px;
+}
+
+h1{
+    color: #FF7043;
+    margin-bottom: 20px;
+}
+
+header p{
+    color: #EFEBE9 ;
+    font-weight: 500;
+}
+
+section{
+    margin: 0 auto;
+    background-color: #EAEDED ;
+    width: 90%;
+    border-radius: 20px;
+    margin-bottom: 20px;
+
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+label{
+    text-align: center;
+    color: #566573  ;
+    margin: 20px 0px 20px 0px;
+}
+
+input{
+    font-family: 'Kreon', serif;
+    text-align: center;
+    border-style: none;
+    font-size: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+button{
+    margin-bottom: 20px;
+    font-family: 'Kreon', serif;
+    padding: 10px;
+    border-radius: 20px;
+    border-style: none;
+    width: 90%;
+    background-color: #FFAB91;
+    color: #FF7043;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #FF7043;
+    color: #FFF;
+}
+
+#resultado,
+#resultadoMediana,
+#resultadoModa{
+    margin-bottom: 20px;
+    color: #FF7043;
+    font-weight: bold;
+}
+
+.regresar{
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #FF7043;
+    font-weight: bold;
+}
+
+.regresar:hover{
+    background-color: #2E7D32;
+}
+
+.regresar a{
+    text-decoration: none;
+    color: #FFF;
+}
+
+
+
+@media (min-width: 720px){
+    section{
+        width:50%;
+    }
+
+    button{
+        width: 50%;
+    }
+};
