@@ -5,7 +5,7 @@
 }
 
 html{
-    font-family: 'kreon' serif;
+    font-family: 'Mukta', sans-serif;
 }
 
 body{
@@ -14,7 +14,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #000033 ;
+    background-color: #212121;
 }
 
 header{
@@ -56,7 +56,7 @@ label{
 }
 
 input{
-    font-family: 'Kreon', serif;
+    font-family: 'Mukta', sans-serif;
     text-align: center;
     border-style: none;
     font-size: 20px;
@@ -66,7 +66,7 @@ input{
 
 button{
     margin-bottom: 20px;
-    font-family: 'Kreon', serif;
+    font-family: 'Mukta', sans-serif;
     padding: 10px;
     border-radius: 20px;
     border-style: none;
@@ -107,6 +107,7 @@ button:hover{
     text-decoration: none;
     color: #FFF;
 }
+
 
 
 

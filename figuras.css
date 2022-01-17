@@ -5,7 +5,8 @@
 }
 
 html{
-    font-family: 'Courgette', cursive;
+    font-family: 'Mukta', sans-serif;
+
 }
 
 body{
@@ -31,71 +32,53 @@ p{
     color: #D35400 ;
 }
 
-/* opciones*/
 
 .seleccionar-figura{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 608px;
+    width: 50%;
     border-radius: 18px;
     cursor: pointer;
     margin-bottom: 20px;
+    background-color: #FF8A65;
 }
 
-.seleccionar-cuadrado{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #3498DB;
-    width: 200px;
-    border-top-left-radius: 13px;
-    border-bottom-left-radius: 13px;
-    padding: 25px;
-}
-
-.seleccionar-cuadrado img{
-    width: 150px;
-}
-
-.seleccionar-cuadrado:hover{
-    background-color: #1B4F72;
-}
-
+.seleccionar-circulo,
+.seleccionar-cuadrado,
 .seleccionar-triangulo{
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: #2ECC71;
-    width: 200px;
-    padding: 14px;
-  }
-  
-.seleccionar-triangulo img{
-      width: 120px;
+    width: 100%;
+    padding: 20px;
 }
 
-.seleccionar-triangulo:hover{
-    background-color: #186A3B;
+.seleccionar-cuadrado{
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
 }
-
 .seleccionar-circulo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #F1C40F;
-    width: 200px;
-    border-top-right-radius: 13px;
-    border-bottom-right-radius: 13px;
-    padding: 27.5px;
-  }
-  
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+
 .seleccionar-circulo img{
     width: 120px;
 }
 
-.seleccionar-circulo:hover{
-    background-color: #7D6608;
+.seleccionar-cuadrado img{
+    width: 130px;
+}
+
+.seleccionar-triangulo img{
+    width: 110px;
+}
+
+.seleccionar-circulo:hover,
+.seleccionar-cuadrado:hover,
+.seleccionar-triangulo:hover{
+    background-color: #FF5722;
 }
 
 .container{
@@ -153,7 +136,7 @@ p{
 }
 
 section{
-    max-width: 30%;
+    max-width: 90%;
 }
 
 section h2{
@@ -176,7 +159,7 @@ form input{
     border-style: none;
     border-radius: 20px;
     padding: 5px;
-    margin-bottom: 16px;
+    margin-bottom: 36px;
 }
 
 .button button{
@@ -217,6 +200,38 @@ form input{
 
 .button-circulo button:hover{
     background-color: #7D6608 ;
+}
+
+.index-talleres a{
+    color: #FF5722;
+}
+
+
+@media(min-width:720px){
+    section{
+        max-width: 50%;
+    }
+    .seleccionar-figura{
+        width: 75%;
+        flex-direction: row;
+    }
+    .seleccionar-cuadrado{
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 18px;
+        border-top-left-radius: 18px;
+        padding: 33px 33px 34px 33px;
+    }
+    .seleccionar-circulo{
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 18px;
+        border-top-right-radius: 18px;
+        padding: 28px;
+    }
+    .seleccionar-triangulo{
+        padding: 20px 20px 21px 20px;
+    }
+    
+
 }
 
 

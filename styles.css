@@ -5,11 +5,11 @@
 }
 
 html{
-    font-family: 'Elsie', cursive;
+    font-family: 'Mukta', cursive;
 }
 
 body{
-    background-color: #000033;
+    background-color: #212121;
 }
 
 .index-header{
@@ -48,13 +48,18 @@ body{
     color: #4E342E;
 }
 
-section{
+section h2{
     text-align: center;
-    color: #000;
+    color: #fff;
+}
+
+section p{
+    text-align: justify;
+    color: #fff;
 }
 
 .description{
-    background-color: #FFAB91;
+    background-color: #FF7043;
     padding: 20px;
     border-radius: 10px;
     width: 90%;
@@ -63,6 +68,14 @@ section{
 
 .description h2{
     margin-bottom: 15px;
+}
+
+.index-talleres{
+    text-align: center;
+}
+
+.index-talleres a{
+    color: #fff;
 }
 
 @media(min-width:720px){
