@@ -70,7 +70,9 @@ function calcularPerimetroCuadrado() {
   const value = input.value;
 
   const perimetro = cuadradoPerimetro(value);
-  alert(perimetro);
+
+  const resultadoPerimetroCuadrado = document.getElementById("resultadoperimetroCuadrado");
+  resultadoPerimetroCuadrado.innerText = `El perimetro es ${perimetro}`;
 }
 
 function calcularAreaCuadrado() {
@@ -78,7 +80,9 @@ function calcularAreaCuadrado() {
   const value = input.value;
 
   const area = cuadradoArea(value);
-  alert(area);
+
+  const resultadoArea = document.getElementById("resultadoAreaCuadrado");
+  resultadoArea.innerText = `El area es ${area}`;
 }
 
 //triangulo
@@ -96,7 +100,9 @@ function calcularPerimetroTriangulo() {
   const value3 = parseInt(inputBase.value, 10);
 
   const perimetro = trianguloPerimetro(value1, value2, value3);
-  alert(perimetro);
+  
+  const resultadoperimetroTiangulo = document.getElementById("resultadoperimetroTiangulo");
+  resultadoperimetroTiangulo.innerText = `El perimetro es ${perimetro}`;
 }
 
 function calcularAreaTriangulo() {
@@ -107,7 +113,9 @@ function calcularAreaTriangulo() {
   const valueAltura = parseInt(inputAltura.value, 10);
 
   const area = trianguloArea(valueBase, valueAltura);
-  alert(area);
+  
+  const resultadoAreaTriangulo = document.getElementById("resultadoAreaTriangulo");
+  resultadoAreaTriangulo.innerText = `El area es ${area}`;
 }
 
 function calcularAlturaTrianguloIsosceles() {
@@ -125,7 +133,11 @@ function calcularAlturaTrianguloIsosceles() {
     valueLado2,
     valueLado3
   );
-  alert(alturaIsosceles);
+  
+    const resultadoAlturaTianguloIsosceles = document.getElementById("resultadoAlturaTianguloIsosceles");
+    resultadoAlturaTianguloIsosceles.innerText = `La altura es ${alturaIsosceles}`;
+
+
 }
 
 //circulo
@@ -135,7 +147,9 @@ function calcularPerimetroCirculo() {
   const valueRadio = parseInt(inputradio.value, 10);
 
   const perimetro = perimetroCirculo(valueRadio);
-  alert(perimetro);
+  
+  const resultadoperimetroCirculo = document.getElementById("resultadoperimetroCirculo");
+  resultadoperimetroCirculo.innerText = `El perimetro es ${perimetro}`;
 }
 
 function calcularAreaCirculo() {
@@ -143,7 +157,10 @@ function calcularAreaCirculo() {
   const valueRadio = parseInt(inputradio.value, 10);
 
   const area = areaCirculo(valueRadio);
-  alert(area);
+  
+  const resultadoAreaCirculo = document.getElementById("resultadoAreaCirculo");
+  resultadoAreaCirculo.innerText = `El area es ${area}`;
+
 }
 
 //mostrar la seleccion de las figuras al dar click calcular y seleccionar la que desea ocultanto las no seleccionadas

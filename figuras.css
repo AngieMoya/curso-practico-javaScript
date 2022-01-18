@@ -162,21 +162,25 @@ form input{
     margin-bottom: 36px;
 }
 
-.button button{
+input:invalid {
+    border: 2px red;
+  }
+
+.button input{
     border-style: none;
     padding: 8px;
     border-radius: 18px;
-    font-family: 'Courgette', cursive;
+    font-family: 'Mukta', sans-serif;
     color: #ffff;
     margin-bottom: 10px;
 }
 
-.button-cuadrado button{
+.button-cuadrado input{
     background-color: #3498DB;
     cursor: pointer;
 }
 
-.button-cuadrado button:hover{
+.button-cuadrado input:hover{
     background-color: #1B4F72;
 }
 
@@ -184,22 +188,27 @@ form input{
     text-align: center;
 }
 
-.button-triangulo button{
+.button-triangulo input{
     background-color: #2ECC71;
     cursor: pointer;
 }
 
-.button-triangulo button:hover{
+.button-triangulo input:hover{
     background-color: #186A3B ;
 }
 
-.button-circulo button{
+.button-circulo input{
     background-color: #F1C40F;
     cursor: pointer;
 }
 
-.button-circulo button:hover{
+.button-circulo input:hover{
     background-color: #7D6608 ;
+}
+
+.resultados p{
+    color: #000;
+    font-size: 16px;
 }
 
 .index-talleres a{

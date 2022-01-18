@@ -54,16 +54,17 @@
                 <label for="medidasCuadrado">
                     Escribe la medida de los lados del cuadrado
                 </label>
-                <input type="number" id="medidasCuadrado" placeholder="Escribe la medida aquí">
+                <input type="number" id="medidasCuadrado" placeholder="Escribe la medida aquí" required> 
                 <div class="button button-cuadrado">
-                    <button type="button" onclick="calcularPerimetroCuadrado()">
-                        <i class="fas fa-calculator"></i>
-                        Calcular perímetro
-                    </button>
-                    <button type="button" onclick="calcularAreaCuadrado()">
-                        <i class="fas fa-calculator"></i>
-                        Calcular área
-                    </button>
+
+                    <input type="submit" value="Calcular perímetro" onclick="calcularPerimetroCuadrado()">
+                        
+                    <input type="submit" value="Calcular área" onclick="calcularAreaCuadrado()">
+        
+                </div>
+                <div class="resultados">
+                    <p id="resultadoperimetroCuadrado"></p>
+                    <p id="resultadoAreaCuadrado"></p>
                 </div>
             </form>
 
@@ -79,17 +80,17 @@
                 <label for="lado1-triangulo">
                     Escribe la medida del lado 1 del triángulo
                 </label>
-                <input type="number" id="lado1-triangulo" placeholder="Escribe la medida aquí">
+                <input type="number" id="lado1-triangulo" placeholder="Escribe la medida aquí" required>
 
                 <label for="lado2-triangulo">
                     Escribe la medida del lado 2 del triángulo
                 </label>
-                <input type="number" id="lado2-triangulo" placeholder="Escribe la medida aquí">
+                <input type="number" id="lado2-triangulo" placeholder="Escribe la medida aquí" required>
 
                 <label for="base-triangulo">
                     Escribe la medida de la base del triángulo
                 </label>
-                <input type="number" id="base-triangulo" placeholder="Escribe la medida aquí">
+                <input type="number" id="base-triangulo" placeholder="Escribe la medida aquí" required>
 
                 <label for="altura-triangulo">
                     Escribe la medida de la altura del triángulo
@@ -98,18 +99,18 @@
 
 
                 <div class="button button-triangulo">
-                    <button type="button" onclick="calcularPerimetroTriangulo()">
-                        <i class="fas fa-calculator"></i>
-                        Calcular perímetro
-                    </button>
-                    <button type="button" onclick="calcularAreaTriangulo()">
-                        <i class="fas fa-calculator"></i>
-                        Calcular área
-                    </button>
-                    <button type="button" onclick="calcularAlturaTrianguloIsosceles()">
-                        <i class="fas fa-calculator"></i>
-                        Calcular altura triangulo Isosceles
-                    </button>
+
+                    <input type="submit" value="Calcular perímetro" onclick="calcularPerimetroTriangulo()">
+
+                    <input type="submit" value="Calcular área" onclick="calcularAreaTriangulo()">
+
+                    <input type="submit" value="Calcular altura triangulo Isosceles" onclick="calcularAlturaTrianguloIsosceles()">
+
+                </div>
+                <div class="resultados">
+                    <p id="resultadoperimetroTiangulo"></p>
+                    <p id="resultadoAreaTriangulo"></p>
+                    <p id="resultadoAlturaTianguloIsosceles"></p>
                 </div>
             </form>
         </section>
@@ -124,16 +125,18 @@
                 <label for="radioCirculo">
                     Escribe la medida del radio del Círculo
                 </label>
-                <input type="number" id="radioCirculo" placeholder="Escribe la medida aquí">
+                <input type="number" id="radioCirculo" placeholder="Escribe la medida aquí" required>
+
                 <div class="button button-circulo">
-                    <button type="button" onclick="calcularPerimetroCirculo()">
-                        <i class="fas fa-calculator"></i>
-                        Calcular perímetro
-                    </button>
-                    <button type="button" onclick="calcularAreaCirculo()">
-                        <i class="fas fa-calculator"></i>
-                        Calcular área
-                    </button>
+
+                    <input type="submit" value="Calcular perímetro" onclick="calcularPerimetroCirculo()">
+                        
+                    <input type="submit" value="Calcular área" onclick="calcularAreaCirculo()">
+
+                </div>
+                <div class="resultados">
+                    <p id="resultadoperimetroCirculo"></p>
+                    <p id="resultadoAreaCirculo"></p>
                 </div>
             </form>
         </section>

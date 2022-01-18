@@ -69,3 +69,5 @@ function calcularDescuentoCupon() {
     resultPriceCupon.innerText = "El cupon de descuento es invalido";
   }
 }
+
+
