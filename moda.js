@@ -26,19 +26,34 @@ function determinarModa(lista) {
   //la moda es la lista en la ultima posicion del array
 
   const moda = listaArray[listaArray.length - 1];
-  return moda
+  return moda;
 }
 
-function calcularModa(){
+function calcularModa() {
   const inputDatos = document.getElementById("datos");
   const datosValue = inputDatos.value;
   const datosListaValue = datosValue.split(",");
-  console.log(datosListaValue);
-
-  const listaObtenida = determinarModa(datosListaValue);
 
   const resultadoModa = document.getElementById("resultadoModa");
 
-  console.log(listaObtenida)
-  resultadoModa.innerText = `la MODA es ${listaObtenida[0]} se repite ${listaObtenida[1]} veces`;
+  if(datosValue.length === 0){
+
+    resultadoModa.innerText = "Debe ingresar los datos que desea evaluar";
+
+
+    //se toma la lista que retorna split para convenrtirlos a numeros, una vez que se
+    //convierte en numeros en una nueva lista con .map una vez que se crea la neva lista
+    //usamos .some(Number.isNaN) para verificar si algun datos es NaN si lo es nos avisa
+    // que los datos no son válidos por un mensaje
+  } else if(datosListaValue.map(element => parseInt(element,10)).some(Number.isNaN)){  
+
+    resultadoModa.innerText = "Datos no válidos"
+
+  } else{
+
+    const listaObtenida = determinarModa(datosListaValue);
+    resultadoModa.innerText = `la MODA es ${listaObtenida[0]} 
+    se repite ${listaObtenida[1]} veces`;
+  };
+
 }

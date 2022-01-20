@@ -67,22 +67,40 @@ console.groupEnd();
 
 function calcularPerimetroCuadrado() {
   const input = document.getElementById("medidasCuadrado");
-  const value = input.value;
-
-  const perimetro = cuadradoPerimetro(value);
+  const value = parseInt(input.value, 10);
 
   const resultadoPerimetroCuadrado = document.getElementById("resultadoperimetroCuadrado");
-  resultadoPerimetroCuadrado.innerText = `El perimetro es ${perimetro}`;
+
+  //validacion para saber si el usuario ingreso informacion
+
+  if(Number.isNaN(value)){
+
+    resultadoPerimetroCuadrado.innerText = "Debe ingresar la medida de los lados";
+
+  } else{
+
+    const perimetro = cuadradoPerimetro(value);
+    resultadoPerimetroCuadrado.innerText = `El perimetro es ${perimetro}`;
+  }  
+
 }
 
 function calcularAreaCuadrado() {
   const input = document.getElementById("medidasCuadrado");
-  const value = input.value;
-
-  const area = cuadradoArea(value);
+  const value = parseInt(input.value, 10);
 
   const resultadoArea = document.getElementById("resultadoAreaCuadrado");
-  resultadoArea.innerText = `El area es ${area}`;
+
+  if (Number.isNaN(value)){
+
+    resultadoArea.innerText = "Debe ingresar la medida de los lados";
+
+  } else{
+
+    const area = cuadradoArea(value);
+    resultadoArea.innerText = `El area es ${area}`;
+  }
+  
 }
 
 //triangulo
@@ -99,10 +117,17 @@ function calcularPerimetroTriangulo() {
   const inputBase = document.getElementById("base-triangulo");
   const value3 = parseInt(inputBase.value, 10);
 
-  const perimetro = trianguloPerimetro(value1, value2, value3);
-  
   const resultadoperimetroTiangulo = document.getElementById("resultadoperimetroTiangulo");
-  resultadoperimetroTiangulo.innerText = `El perimetro es ${perimetro}`;
+
+  if (Number.isNaN(value1) || Number.isNaN(value2) || Number.isNaN(value3)){
+
+    resultadoperimetroTiangulo.innerText = "Debe ingresar la medida de los dos lados y la base del triangulo";
+  } else{
+
+    const perimetro = trianguloPerimetro(value1, value2, value3);
+    resultadoperimetroTiangulo.innerText = `El perimetro es ${perimetro}`;
+  };
+  
 }
 
 function calcularAreaTriangulo() {
@@ -112,10 +137,16 @@ function calcularAreaTriangulo() {
   const inputAltura = document.getElementById("altura-triangulo");
   const valueAltura = parseInt(inputAltura.value, 10);
 
-  const area = trianguloArea(valueBase, valueAltura);
-  
   const resultadoAreaTriangulo = document.getElementById("resultadoAreaTriangulo");
-  resultadoAreaTriangulo.innerText = `El area es ${area}`;
+
+  if(Number.isNaN(valueBase) || Number.isNaN(valueAltura)){
+    resultadoAreaTriangulo.innerText = "Debe ingresar la medida de la altura y base del triangulo";
+  } else{
+
+    const area = trianguloArea(valueBase, valueAltura);
+    resultadoAreaTriangulo.innerText = `El area es ${area}`;
+  };
+
 }
 
 function calcularAlturaTrianguloIsosceles() {
@@ -128,16 +159,25 @@ function calcularAlturaTrianguloIsosceles() {
   const inputLado3 = document.getElementById("base-triangulo");
   const valueLado3 = parseInt(inputLado3.value, 10);
 
-  const alturaIsosceles = alturaTrianguloIsosceles(
-    valueLado1,
-    valueLado2,
-    valueLado3
-  );
-  
-    const resultadoAlturaTianguloIsosceles = document.getElementById("resultadoAlturaTianguloIsosceles");
+  const resultadoAlturaTianguloIsosceles = document.getElementById("resultadoAlturaTianguloIsosceles");
+
+  if(Number.isNaN(valueLado1)|| Number.isNaN(valueLado2) || Number.isNaN(valueLado3)){
+    resultadoAlturaTianguloIsosceles.innerText = "Debe ingresar la medida de los tres lados del triangulo";
+  } else{
+
+    const alturaIsosceles = alturaTrianguloIsosceles(
+      valueLado1,
+      valueLado2,
+      valueLado3
+    );
     resultadoAlturaTianguloIsosceles.innerText = `La altura es ${alturaIsosceles}`;
+  };
 
-
+  
+  
+    
+    
+    
 }
 
 //circulo
@@ -146,24 +186,39 @@ function calcularPerimetroCirculo() {
   const inputradio = document.getElementById("radioCirculo");
   const valueRadio = parseInt(inputradio.value, 10);
 
-  const perimetro = perimetroCirculo(valueRadio);
-  
   const resultadoperimetroCirculo = document.getElementById("resultadoperimetroCirculo");
-  resultadoperimetroCirculo.innerText = `El perimetro es ${perimetro}`;
+
+  if (Number.isNaN(valueRadio)){
+
+    resultadoperimetroCirculo.innerText = "Debe ingresar el valor del radio";
+
+  } else{
+
+    const perimetro = perimetroCirculo(valueRadio);
+    resultadoperimetroCirculo.innerText = `El perimetro es ${perimetro}`;
+  };
+  
 }
 
 function calcularAreaCirculo() {
   const inputradio = document.getElementById("radioCirculo");
   const valueRadio = parseInt(inputradio.value, 10);
 
-  const area = areaCirculo(valueRadio);
-  
   const resultadoAreaCirculo = document.getElementById("resultadoAreaCirculo");
-  resultadoAreaCirculo.innerText = `El area es ${area}`;
 
+  if(Number.isNaN(valueRadio)){
+
+    resultadoAreaCirculo.innerText = "Debe ingresar el valor del radio";
+
+  } else{
+
+    const area = areaCirculo(valueRadio);
+    resultadoAreaCirculo.innerText = `El area es ${area}`;
+  };
 }
 
-//mostrar la seleccion de las figuras al dar click calcular y seleccionar la que desea ocultanto las no seleccionadas
+//mostrar la seleccion de las figuras al dar click calcular y seleccionar la que desea 
+//ocultanto las no seleccionadas
 
 function imprimir(argumento) {
   const containerArray = document.getElementsByClassName("container");

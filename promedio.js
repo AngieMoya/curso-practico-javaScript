@@ -7,7 +7,7 @@ function calcularMediaAritmetica(lista){
     // sumando elementos de la lista con el metodo reduce
 
     const sumaLista = lista.reduce(function (valorAcumulado, nuevoElemento){
-        console.log(valorAcumulado)
+        //console.log(valorAcumulado)
         return parseInt(valorAcumulado, 10) + parseInt(nuevoElemento, 10);
     })  ;
 
@@ -21,13 +21,32 @@ function calcularMediaAritmetica(lista){
 function calcularPromedio(){
     const inputDatos = document.getElementById("datos");
     const datosValue = inputDatos.value;
-    const datosListaValue = datosValue.split(",");
-    console.log(datosListaValue);
+    console.log(datosValue)
+    
 
-    const listaObtenida = calcularMediaAritmetica(datosListaValue);
+    const datosListaValue = datosValue.split(",");
+    console.log( datosListaValue)
 
     const resultado = document.getElementById("resultado");
 
-    console.log(listaObtenida)
-    resultado.innerText = `El promedio es ${listaObtenida}`;
+    // validandoo que el input no este vacío
+
+    if(datosValue.length === 0){
+
+        resultado.innerText = "Debe ingresar los datos que desea evaluar";
+
+
+        //se toma la lista que retorna split para convenrtirlos a numeros, una vez que se
+        //convierte en numeros en una nueva lista con .map una vez que se crea la neva lista
+        //usamos .some(Number.isNaN) para verificar si algun datos es NaN si lo es nos avisa
+        // que los datos no son válidos por un mensaje
+    } else if(datosListaValue.map(element => parseInt(element,10)).some(Number.isNaN)){  
+
+        resultado.innerText = "Datos no válidos"
+
+    } else{
+
+        const listaObtenida = calcularMediaAritmetica(datosListaValue);
+        resultado.innerText = `El promedio es ${listaObtenida}`;
+    };
 }
